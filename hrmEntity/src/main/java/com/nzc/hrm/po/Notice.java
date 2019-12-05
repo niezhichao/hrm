@@ -8,8 +8,7 @@ public class Notice implements Serializable {
     private String title;
     private String content;
     private Date createDate;
-    private UserInfo userInfo;
-
+    private int userId;
     public Notice(){}
 
     public int getId() {
@@ -44,11 +43,11 @@ public class Notice implements Serializable {
         this.createDate = createDate;
     }
 
-    public UserInfo getUserInfo() {
-        return userInfo;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUserInfo(UserInfo userInfo) {
-        this.userInfo = userInfo;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 }

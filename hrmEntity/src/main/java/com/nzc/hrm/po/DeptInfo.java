@@ -1,11 +1,17 @@
 package com.nzc.hrm.po;
 
+import javax.persistence.*;
 import java.io.Serializable;
-
+@Entity
+@Table(name = "dept_inf")
 public class DeptInfo implements Serializable {
 
+    @Id
+    @Column(name="ID")
     private int id;
+    @Column(name="NAME")
     private String name;
+    @Column(name="ID")
     private String remark;
 
     public DeptInfo(){

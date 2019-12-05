@@ -4,8 +4,8 @@ import java.io.Serializable;
 
 public class Employee implements Serializable {
     private int id;
-    private DeptInfo deptInfo;
-    private JobInfo jobInfo;
+    private  int  deptId;
+    private int  jobId;
     private String name;
     private String IDCard;//身份证
     private String addr;
@@ -23,20 +23,20 @@ public class Employee implements Serializable {
         this.id = id;
     }
 
-    public DeptInfo getDeptInfo() {
-        return deptInfo;
+    public int getDeptId() {
+        return deptId;
     }
 
-    public void setDeptInfo(DeptInfo deptInfo) {
-        this.deptInfo = deptInfo;
+    public void setDeptId(int deptId) {
+        this.deptId = deptId;
     }
 
-    public JobInfo getJobInfo() {
-        return jobInfo;
+    public int getJobId() {
+        return jobId;
     }
 
-    public void setJobInfo(JobInfo jobInfo) {
-        this.jobInfo = jobInfo;
+    public void setJobId(int jobId) {
+        this.jobId = jobId;
     }
 
     public String getName() {
