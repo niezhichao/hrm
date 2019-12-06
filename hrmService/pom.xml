@@ -11,5 +11,12 @@
 
     <artifactId>hrmService</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.nzc.hrm</groupId>
+            <artifactId>hrmDao</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>
