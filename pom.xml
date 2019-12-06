@@ -27,6 +27,7 @@
    </properties>
 
     <dependencyManagement>
+
         <dependencies>
             <!--mybatis组件-->
             <dependency>

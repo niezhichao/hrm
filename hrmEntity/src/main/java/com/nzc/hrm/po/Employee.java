@@ -1,16 +1,31 @@
 package com.nzc.hrm.po;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 
+@Entity
+@Table(name ="job_inf")
 public class Employee implements Serializable {
+    @Id
     private int id;
+    @Column(name = "DEPT_ID")
     private  int  deptId;
+    @Column(name = "JOB_ID")
     private int  jobId;
+    @Column(name = "NAME")
     private String name;
+    @Column(name = "CARD_ID")
     private String IDCard;//身份证
+    @Column(name = "ADDRESS")
     private String addr;
+    @Column(name = "TEL")
     private String tel;
+    @Column(name = "PHONE")
     private String phone;
+    @Column(name = "SEX")
     private int sex;
 
     public Employee(){}

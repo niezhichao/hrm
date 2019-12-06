@@ -1,13 +1,23 @@
 package com.nzc.hrm.po;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
-
+@Entity
+@Table(name = "notice_inf")
 public class Notice implements Serializable {
+    @Id
     private int id;
+    @Column(name="TITLE")
     private String title;
+    @Column(name="CONTENT")
     private String content;
+    @Column(name="CREATE_DATE")
     private Date createDate;
+    @Column(name="USER_ID")
     private int userId;
     public Notice(){}
 

@@ -11,7 +11,7 @@ public class DeptInfo implements Serializable {
     private int id;
     @Column(name="NAME")
     private String name;
-    @Column(name="ID")
+    @Column(name="REMARK")
     private String remark;
 
     public DeptInfo(){
