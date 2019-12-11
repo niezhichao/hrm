@@ -1,0 +1,7 @@
+com\nzc\hrm\entity\po\Notice.class
+com\nzc\hrm\entity\po\Document.class
+com\nzc\hrm\entity\vo\DeptInfoVo.class
+com\nzc\hrm\entity\po\UserInfo.class
+com\nzc\hrm\entity\po\DeptInfo.class
+com\nzc\hrm\entity\po\Employee.class
+com\nzc\hrm\entity\po\JobInfo.class
