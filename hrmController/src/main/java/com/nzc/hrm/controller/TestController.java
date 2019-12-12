@@ -9,12 +9,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class TestController {
-   /* @Autowired
-    private DeptDao deptDao;
+
 
     @RequestMapping(value = "/test")
     @ResponseBody
-    public DeptInfo test(){
-        return  deptDao.getElementById(1);
-    }*/
+    public String test(){
+        return  "test";
+    }
 }

@@ -7,6 +7,7 @@ import java.util.Map;
 public interface BaseDao <T,ID,V extends Serializable> {
    int  insert(T record);
    int  deleteById(ID id);
+   int update(T record);
    int  deleteByExample(V example);
    List<T> getListByExample(V example);
    T getElementById(ID id);

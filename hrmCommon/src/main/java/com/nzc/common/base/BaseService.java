@@ -8,6 +8,7 @@ public interface BaseService<T,ID,V> {
     int  insert(T record);
     int  deleteById(ID id);
     int  deleteByExample(V example);
+    int update(T record);
     List<T> getListByExample(V example);
     T getElementById(ID id);
     List<T> getListByMap(Map param);

@@ -16,6 +16,10 @@ public class DeptInfoServiceImpl implements DeptInfoService {
     @Autowired
     DeptDao deptDao;
 
+    public int update(DeptInfo record) {
+        return 0;
+    }
+
     public int insert(DeptInfo record) {
         return 0;
     }

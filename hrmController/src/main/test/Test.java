@@ -15,7 +15,10 @@ public class Test {
     @org.junit.Test
     public void test(){
         DeptInfo deptInfo=new DeptInfo();
-        deptInfo.setName("人事部");
+        deptInfo.setName("侦察股");
+        deptInfo.setRemark("团机关");
         deptDao.insert(deptInfo);
+
+
     }
 }
