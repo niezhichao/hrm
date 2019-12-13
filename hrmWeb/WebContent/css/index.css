@@ -1,0 +1,24 @@
+.header{
+    height: 70px;
+    background-color: #01AAED;
+}
+
+#title_header{
+    font-family: KaiTi;
+    font-weight: bold;
+    font-size: 40px ;
+    vertical-align: center;
+    color: #D0D0D0;
+}
+
+#title_userLabel{
+    color: white;
+    margin-left: 500px;
+    margin-right: 20px;
+    font-family: KaiTi;
+}
+
+#title_timeLabel{
+    color: white;
+    font-family: KaiTi;
+}
