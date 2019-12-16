@@ -1,5 +1,5 @@
 .header{
-    height: 70px;
+    height: 60px;
     background-color: #01AAED;
 }
 
@@ -21,4 +21,61 @@
 #title_timeLabel{
     color: white;
     font-family: KaiTi;
+}
+
+.menuBlock{
+    height: 500px;
+    width: 10%;
+    border-right: dashed 1px;
+    background-color: powderblue;
+    float: left;
+}
+
+.contentBlock{
+    height: 500px;
+    width: 90%;
+}
+
+.menuBlock ul{
+    list-style: none;
+    width: 100px;
+    height: auto;
+}
+
+.menuBlock ul li:hover{
+    background: #c1c1c1;
+}
+
+.menuBlock .menuUlLv1{
+    height: 90%;
+}
+
+.menuBlock .menuUlLv1 li {
+    font-family: KaiTi;
+    font-weight: bold;
+    width: 75%;
+    height: 50px;
+    text-align: center;
+    position: relative;
+}
+
+/*.menuBlock .menuUlLv1 li span{
+    display: block;
+}*/
+
+
+.menuBlock ul .menuUlLv2 {
+    position: relative;
+    left: 78px;
+    top: -20px;
+    display: none;}
+
+
+.menuBlock .menuUlLv1 .menuLiLv1:hover ul.menuUlLv2{
+    display: block;
+    background: #e8e8e8;
+}
+
+footer{
+    text-align: center;
 }
