@@ -4,7 +4,7 @@ var AppConf={
     jsRoot:"../js/"
 }
 
-/**/
+/*获取页面名称*/
 function getPageName() {
     var url=location.href;
     var arr=url.split("/");
