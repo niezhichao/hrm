@@ -23,12 +23,18 @@
     font-family: KaiTi;
 }
 
+
+
 .menuBlock{
     height: 500px;
     width: 10%;
     border-right: dashed 1px;
     background-color: powderblue;
     float: left;
+}
+
+.menuBlock a{
+    text-decoration: none;
 }
 
 .contentBlock{
@@ -39,7 +45,7 @@
 
 .menuBlock ul{
     list-style: none;
-    width: 100px;
+    width: 90px;
     height: auto;
 }
 
@@ -57,23 +63,112 @@
     width: 75%;
     height: 50px;
     text-align: center;
-    position: relative;
 }
 
 .menuBlock ul .menuUlLv2 {
     position: relative;
-    left: 78px;
-    top: -20px;
+    left: -30px;
+    top: 0px;
     display: none;}
 
+.menuUlLv2{
+    background-color: #f9f9f9;
+    box-shadow: 2px 8px 16px skyblue;
+}
 
 .menuBlock .menuUlLv1 .menuLiLv1:hover ul.menuUlLv2{
     display: block;
-    background: #e8e8e8;
+}
+
+#tabList a{
+    font-family: KaiTi;
+    text-decoration: none;
+    color: black;
+
+}
+
+#tabList a:hover{
+    cursor: default;
+}
+
+.nav{
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.nav li{
+    float: left;
+    position: relative;
+    display: block;
+}
+
+.nav-tabs {
+    margin-bottom: 0;
+    margin-left: 0;
+    border: 0;
+    top: 2px;
+    background-color: #f3f3f3;
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0,.3);
+    box-shadow: 0 0 4px rgba(0,0,0,.3);
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-tabs li {
+    margin-bottom: 0px;
+    margin-left: 5px;
+}
+.nav-tabs li i {
+    position: relative;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 
+.fa{
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+}
 
+.fa-times:before{
+    content: "x";
+}
+
+#tabList {
+    height: 40px;
+    overflow: hidden;
+}
+
+#tabList  li {
+    height: 35px;
+    overflow: hidden;
+    margin-top: 5px;
+    background: #dedede;
+    background: rgba(0,0,0,0.05);
+    color: #777;
+}
+
+#tabList   li.active, #tabList li:hover, #tabList li:focus {
+    background-color: lightblue;
+    border-bottom-color: transparent;
+    box-shadow: 0 -2px 3px 0 rgba(0,0,0,.15);
+}
+
+#tabList li.active {
+    border-top: 2px solid #2dc3e8;
+}
+
+.pageContent .active{
+    display: block;
+}
+
+.pageContent div{
+    display: none;
+}
 
 footer{
     text-align: center;

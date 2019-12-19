@@ -20,6 +20,19 @@ $(function () {
             addTabLabel(linkId, text, url, null);
         });
     });
+
+//切换tab页的显示
+    $(document).on('click','#tabList li',function(e){
+        //清除原来显示的tab页
+        var oldTab = $("#tabList li.active").removeClass("active").find("a[data-toggle='tab']");
+        $(oldTab.attr("href")).removeClass("active");
+
+        //设置新的显示tab页
+        var newTab = $(this).addClass("active").find("a[data-toggle='tab']");
+        $(newTab.attr("href")).addClass("active");
+
+        //refreshTabHistory(false/*isDelete*/,$(this).attr('id').substring(4));
+    })
 });
 
 /*
@@ -40,7 +53,7 @@ function addTabLabel(id, text, url, innerTab) {
 
         //添加tab标签
         $('#tabList li').removeClass('active');
-        var tabHTML = "<li id='" + tab_id + "' class='active'><a data-toggle='tab' href='#" + tabContent_id + "'>" + text + "</a>" +
+        var tabHTML = "<li id='" + tab_id + "' class='active'><a onclick='return false' data-toggle='tab' href='#" + tabContent_id + "'>" + text + "</a>" +
             "<i class='fa fa-times' onclick='deleteTab(\"" + id + "\")'></i></li>";
         $('#tabList').append(tabHTML);
 
@@ -52,6 +65,15 @@ function addTabLabel(id, text, url, innerTab) {
 
     }
 
+}
+
+//参数id为tab的标志，但是并不是tab页的id属性，真正的id属性值是"tab-"+id
+function deleteTab(id) {
+
+    var tabJQ=$("#tab_"+id);
+    var tabContentJQ=$("#tabContent_" + id);
+        tabJQ.remove();
+        tabContentJQ.remove();
 }
 
 /*
