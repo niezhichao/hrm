@@ -1,7 +1,8 @@
 var AppConf={
     resourceRoot:"../resource/",
     cssRoot:"../css/",
-    jsRoot:"../js/"
+    jsRoot:"../js/",
+    common:"../common/"
 }
 
 /*获取页面名称*/

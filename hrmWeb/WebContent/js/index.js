@@ -1,5 +1,5 @@
 $(function () {
-
+    $("#currentTime").text(newDate.createDate()+"  "+newDate.getDayOfWeek());
 
     //手动调用切换到要显示的tab页,当前的action只支持show
     //eg:$("#tab-0 a[data-toggle='tab']").tab("show");
@@ -32,7 +32,7 @@ $(function () {
         $(newTab.attr("href")).addClass("active");
 
         //refreshTabHistory(false/*isDelete*/,$(this).attr('id').substring(4));
-    })
+    });
 });
 
 /*
