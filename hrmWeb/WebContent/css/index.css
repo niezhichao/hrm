@@ -170,6 +170,11 @@
     display: none;
 }
 
+iframe{
+    height: 430px;
+    width: 99.7%;
+}
+
 footer{
     text-align: center;
 }
