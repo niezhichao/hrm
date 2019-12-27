@@ -11,19 +11,19 @@
     <div class="label_head"><span><label>表单数据</label></span></div>
 
     <div id="content_createUser">
-        <form>
+        <form id="userCreatedForm">
             <table>
                 <tr>
-                    <td><span><label>姓名</label></span></td><td><input /></td>
+                    <td><span><label>姓名</label></span></td><td><input name="username"/></td>
                 </tr>
                 <tr>
-                    <td><span><label>登录名</label></span></td><td><input /></td>
+                    <td><span><label>登录名</label></span></td><td><input name="loginName"/></td>
                 </tr>
                 <tr>
-                    <td><span><label>状态</label></span></td><td><input /></td>
+                    <td><span><label>状态</label></span></td><td><input name="status"/></td>
                 </tr>
                 <tr>
-                    <td><span><label>密码</label></span></td><td><input /></td>
+                    <td><span><label>密码</label></span></td><td><input name="password"/></td>
                 </tr>
             </table>
             <button type="submit">添加</button><button type="reset">重置</button>
