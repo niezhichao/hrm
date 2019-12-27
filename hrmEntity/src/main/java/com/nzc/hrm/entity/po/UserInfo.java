@@ -8,9 +8,18 @@ public class UserInfo implements Serializable {
     private String username;//用户名
     private String loginName;//登录名
     private int status;
+    private String password;//密码
     private Date createDate;
 
     public UserInfo() {
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public int getId() {
