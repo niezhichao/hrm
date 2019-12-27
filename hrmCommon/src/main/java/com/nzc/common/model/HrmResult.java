@@ -1,10 +1,12 @@
 package com.nzc.common.model;
 
+import java.io.Serializable;
+
 /**
  * class for response result
  * @author niezhichao 2019/12/11
  */
-public class HrmResult {
+public class HrmResult  {
     private String msg;
     private int status;
     private Object data;

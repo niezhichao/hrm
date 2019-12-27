@@ -24,4 +24,6 @@ public class UserInfoController implements UserInfoApi {
         userInfoService.insert(userInfo);
         return HrmResult.ok();
     }
+
+
 }
