@@ -9,7 +9,7 @@ public class UserInfo implements Serializable {
     private String loginName;//登录名
     private int status;
     private String password;//密码
-    private Date createDate;
+    private String createDate;
 
     public UserInfo() {
     }
@@ -55,11 +55,11 @@ public class UserInfo implements Serializable {
         this.status = status;
     }
 
-    public Date getCreateDate() {
+    public String getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(Date createDate) {
+    public void setCreateDate(String createDate) {
         this.createDate = createDate;
     }
 }

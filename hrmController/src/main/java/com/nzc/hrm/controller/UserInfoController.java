@@ -20,7 +20,7 @@ public class UserInfoController implements UserInfoApi {
     @RequestMapping("/insert")
     @ResponseBody
     @Override
-    public HrmResult insertUserIfo(UserInfo userInfo) {
+    public HrmResult insertUserIfo(@RequestBody UserInfo userInfo) {
         userInfoService.insert(userInfo);
         return HrmResult.ok();
     }

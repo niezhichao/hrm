@@ -7,6 +7,9 @@ import com.nzc.hrm.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -17,6 +20,8 @@ public class UserInfoServiceImpl implements UserInfoService {
     UserInfoDao userInfoDao;
 
     public int insert(UserInfo record) {
+        SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
+        record.setCreateDate( format.format(new Date()));
         return userInfoDao.insert(record);
     }
 
