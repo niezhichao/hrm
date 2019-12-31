@@ -6,7 +6,7 @@ import java.io.Serializable;
  * class for response result
  * @author niezhichao 2019/12/11
  */
-public class HrmResult  {
+public class HrmResult  implements Serializable{
     private String msg;
     private int status;
     private Object data;

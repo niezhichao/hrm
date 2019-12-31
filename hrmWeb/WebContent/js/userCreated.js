@@ -6,14 +6,14 @@ $(function () {
         formData.loginName=$("input[name='loginName']").val();
         formData.status=$("input[name='status']").val();
         formData.password=$("input[name='password']").val();
-        console.log(formData);
-        debugger;
         $.ajax({
             type:"post",
             url:'http://127.0.0.1:8090'+reqUrl.createUserUrl,
             data:JSON.stringify(formData),
+            dataType:"json",
             headers	:{'Content-Type': 'application/json'},
             success:function (data) {
+                console.log(22);
                 console.log(data);
             },
             error:function () {
