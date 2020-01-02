@@ -22,8 +22,7 @@ public class UserInfoController implements UserInfoApi {
     @Override
     public HrmResult insertUserIfo(@RequestBody UserInfo userInfo) {
         userInfoService.insert(userInfo);
-       /* return HrmResult.ok();*/
-        return new HrmResult("success");
+        return HrmResult.ok();
     }
 
 
