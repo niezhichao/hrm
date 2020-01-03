@@ -17,7 +17,7 @@ public class UserInfoController implements UserInfoApi {
     @Autowired
     UserInfoService userInfoService;
 
-    @RequestMapping(value = "/insert",consumes="application/json")
+    @RequestMapping("/insert")
     @ResponseBody
     @Override
     public HrmResult insertUserIfo(@RequestBody UserInfo userInfo) {
