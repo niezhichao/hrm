@@ -35,7 +35,9 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
-    <tx:advice id="txAdivice" transaction-manager="transactionMananger">
+    <tx:annotation-driven transaction-manager="transactionMananger" />
+
+    <tx:advice id="txAdvice" transaction-manager="transactionMananger">
 
         <tx:attributes>
             <tx:method name="insert*" propagation="REQUIRED"/>
@@ -46,6 +48,7 @@
     </tx:advice>
 
     <aop:config>
-        <aop:advisor advice-ref="txAdivice" pointcut="execution(* com.nzc.hrm.service.*.*(..))"></aop:advisor>
+        <aop:pointcut id="txPointCut" expression="execution(* com.nzc.hrm.service.impl..*.*(..))"></aop:pointcut>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointCut"></aop:advisor>
     </aop:config>
 </beans>

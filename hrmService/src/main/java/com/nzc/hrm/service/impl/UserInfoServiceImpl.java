@@ -6,6 +6,7 @@ import com.nzc.hrm.entity.vo.UserInfoVo;
 import com.nzc.hrm.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -19,9 +20,10 @@ public class UserInfoServiceImpl implements UserInfoService {
     @Autowired
     UserInfoDao userInfoDao;
 
-    public int insert(UserInfo record) {
+    public int insert(UserInfo record)throws Exception{
         SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
         record.setCreateDate( format.format(new Date()));
+        userInfoDao.insert(record);
         return userInfoDao.insert(record);
     }
 
