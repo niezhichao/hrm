@@ -17,6 +17,9 @@
     <param-value>classpath:spring/application-*.xml</param-value>
   </context-param>
 
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
   <!--    log4j2   -->
   <context-param>
     <param-name>isLog4jAutoInitializationDisabled</param-name>
@@ -45,9 +48,6 @@
     <dispatcher>ERROR</dispatcher>
   </filter-mapping>
 
-  <listener>
-    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  </listener>
   <filter>
     <filter-name>CORS</filter-name>
     <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>

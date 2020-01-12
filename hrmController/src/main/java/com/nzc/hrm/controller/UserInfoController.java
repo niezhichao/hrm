@@ -4,6 +4,7 @@ import com.nzc.common.model.HrmResult;
 import com.nzc.hrm.api.UserInfoApi;
 import com.nzc.hrm.entity.po.UserInfo;
 import com.nzc.hrm.service.UserInfoService;
+import com.nzc.hrm.service.impl.UserInfoServiceImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,13 +25,26 @@ public class UserInfoController implements UserInfoApi {
     @RequestMapping("/insert")
     @ResponseBody
     @Override
-    public HrmResult insertUserIfo(@RequestBody UserInfo userInfo) {
+    public HrmResult insertUserInfo(@RequestBody  UserInfo userInfo) {
         try {
             userInfoService.insert(userInfo);
         }catch (Exception e){
             e.printStackTrace();
         }
+
         return HrmResult.ok();
+    }
+
+    private void test1(){
+
+    }
+
+    @RequestMapping("/test")
+    @ResponseBody
+    public  HrmResult  test(@RequestBody UserInfo userInfo){
+        log.info(userInfo.getUsername());
+        //userInfoService.insert(userInfo);
+        return   HrmResult.ok();
     }
 
 }

@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 public interface BaseService<T,ID,V> {
-    int  insert(T record)throws Exception;
+    void  insert(T record);
     int  deleteById(ID id)throws Exception;
     int  deleteByExample(V example)throws Exception;
     int update(T record)throws Exception;

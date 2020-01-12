@@ -20,8 +20,7 @@ public class DeptInfoServiceImpl implements DeptInfoService {
         return 0;
     }
 
-    public int insert(DeptInfo record) {
-        return 0;
+    public void insert(DeptInfo record) {
     }
 
     public int deleteById(Integer integer) {

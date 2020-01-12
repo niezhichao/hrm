@@ -1,3 +1,4 @@
 var reqUrl={
-    createUserUrl:"/userInfo/insert"
+    createUserUrl:"/userInfo/insert",
+    testUrl:"/userInfo/test"
 };

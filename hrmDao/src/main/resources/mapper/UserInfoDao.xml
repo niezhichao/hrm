@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.nzc.hrm.dao.UserInfoDao" >
 
-   <insert id="insert" parameterType="userInfo">
+   <insert id="insertItem" parameterType="userInfo">
        insert into user_inf(LOGINNAME,PASSWORD,USERNAME,CREATEDATE) values(#{loginName},#{password},#{username},#{createDate})
    </insert>
 </mapper>
