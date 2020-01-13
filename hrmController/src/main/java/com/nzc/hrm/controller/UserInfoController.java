@@ -30,15 +30,10 @@ public class UserInfoController implements UserInfoApi {
         }catch (Exception e){
             e.printStackTrace();
         }
-
         return HrmResult.ok();
     }
-    @RequestMapping("/test")
-    @ResponseBody
-    public  HrmResult  test(@RequestBody UserInfo userInfo){
-        log.info(userInfo.getUsername());
-        //userInfoService.insert(userInfo);
-        return   HrmResult.ok();
-    }
+
+
+
 
 }

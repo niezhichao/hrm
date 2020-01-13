@@ -8,39 +8,33 @@ import java.io.Serializable;
  */
 public class HrmResult  implements Serializable{
     private String msg;
-    private int status;
+    private String code;
     private Object data;
 
-    public HrmResult(String msg,int status){
-        this.msg=msg;
-        this.status=status;
-    }
 
-    public HrmResult(String msg,Object data){
-        this.msg=msg;
-        this.data=data;
-        this.status=200;
+    public HrmResult(ResultCode resultCode){
+
+        this.msg=resultCode.getMsg();
+        this.code=resultCode.getCode();
     }
 
     public HrmResult(Object data){
         this.data=data;
-        this.status=200;
+    }
+
+    public HrmResult(ResultCode resultCode,Object data){
+        this(resultCode);
+        this.data=data;
     }
 
     public static HrmResult ok(){
-        return new HrmResult("Program execute normally",200);
+        return new HrmResult(ResultCode.SUCCESS);
     }
 
-    public static HrmResult  success(String msg,Object data){
-        return new HrmResult(msg,data);
-    }
-    public static HrmResult success(Object data){
-        return new HrmResult(data);
+    public static HrmResult error(){
+        return new HrmResult(ResultCode.ERROR);
     }
 
-    public static HrmResult error(String msg,int status){
-        return new HrmResult(msg,status);
-    }
     public String getMsg() {
         return msg;
     }
@@ -49,12 +43,12 @@ public class HrmResult  implements Serializable{
         this.msg = msg;
     }
 
-    public int getStatus() {
-        return status;
+    public String getCode() {
+        return code;
     }
 
-    public void setStatus(int status) {
-        this.status = status;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public Object getData() {

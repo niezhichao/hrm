@@ -15,7 +15,7 @@ $(function () {
             contentType:"application/json",
             async:true,
             success:function (data) {
-                console.log(data);
+
             },
             error:function () {
 
