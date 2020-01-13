@@ -4,7 +4,6 @@ import com.nzc.common.model.HrmResult;
 import com.nzc.hrm.api.UserInfoApi;
 import com.nzc.hrm.entity.po.UserInfo;
 import com.nzc.hrm.service.UserInfoService;
-import com.nzc.hrm.service.impl.UserInfoServiceImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,11 +33,6 @@ public class UserInfoController implements UserInfoApi {
 
         return HrmResult.ok();
     }
-
-    private void test1(){
-
-    }
-
     @RequestMapping("/test")
     @ResponseBody
     public  HrmResult  test(@RequestBody UserInfo userInfo){

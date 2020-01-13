@@ -17,7 +17,7 @@ public class Test {
         DeptInfo deptInfo=new DeptInfo();
         deptInfo.setName("侦察股");
         deptInfo.setRemark("团机关");
-        deptDao.insert(deptInfo);
+        deptDao.insertItem(deptInfo);
 
 
     }

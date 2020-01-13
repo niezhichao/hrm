@@ -1,6 +1,6 @@
 $(function () {
 
-    $("button[type='submit']").click(function () {
+    $("button[type='submit']").click(function (e) {
         var formData={};
         formData.username=$("input[name='username']").val();
         formData.loginName=$("input[name='loginName']").val();
@@ -16,11 +16,11 @@ $(function () {
             async:true,
             success:function (data) {
                 console.log(data);
-                alert(22);
             },
             error:function () {
 
             }
         });
+        return false;
     });
 });

@@ -3,7 +3,7 @@ var newDate={
     /*创建日期 yyyy/MM/dd HH:mm:ss*/
     createDate:function () {
         var date=new Date();
-        return (date.getFullYear()+1)+"/"+swith(date.getMonth())+"/" +swith(date.getDate())+"  "+
+        return (date.getFullYear())+"/"+swith(date.getMonth()+1)+"/" +swith(date.getDate())+"  "+
             swith(date.getHours())+":"+swith(date.getMinutes())+":"+swith(date.getSeconds());
     },
 
