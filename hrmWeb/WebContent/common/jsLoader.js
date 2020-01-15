@@ -23,7 +23,9 @@ function loadJs(path) {
 }
 
 loadJs(AppConf.resourceRoot+"jquery/jquery-3.3.1.js");
+loadJs(AppConf.resourceRoot+"jquery/jquery-ui-1.12.1.custom/jquery-ui.js");
 loadJs(AppConf.jsRoot+getPageName()+".js");
 loadCss(AppConf.cssRoot+getPageName()+".css");
+loadCss(AppConf.resourceRoot+"jquery/jquery-ui-1.12.1.custom/jquery-ui.css");
 
 

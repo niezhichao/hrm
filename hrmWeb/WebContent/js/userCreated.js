@@ -1,5 +1,4 @@
 $(function () {
-
     $("button[type='submit']").click(function (e) {
         var formData={};
         formData.username=$("input[name='username']").val();
@@ -15,7 +14,20 @@ $(function () {
             contentType:"application/json",
             async:true,
             success:function (data) {
-
+                var dialogOpts={
+                    modal:true,
+                    title:"提示信息",
+                    open:function () {
+                        $("#promptMsg").text(data.msg);
+                        $("#promptIcon").attr("class","ui-icon ui-icon-circle-check");
+                    },
+                    buttons:{
+                        "确认":function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                }
+                $("#promptContent").dialog(dialogOpts);
             },
             error:function () {
 
