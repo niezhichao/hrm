@@ -1,4 +1,4 @@
-package com.nzc.common.exception;
+package com.nzc.hrm.controller.exceptionHandler;
 
 import com.nzc.common.model.ResultCode;
 

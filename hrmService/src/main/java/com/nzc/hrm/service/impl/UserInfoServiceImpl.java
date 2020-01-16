@@ -21,11 +21,7 @@ public class UserInfoServiceImpl implements UserInfoService {
     public void insert(UserInfo record){
         SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
         record.setCreateDate( format.format(new Date()));
-        try{
             userInfoDao.insertItem(record);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
     }
 
     public int deleteById(Integer integer) {

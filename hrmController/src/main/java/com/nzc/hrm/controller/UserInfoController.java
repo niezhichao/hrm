@@ -24,16 +24,8 @@ public class UserInfoController implements UserInfoApi {
     @RequestMapping("/insert")
     @ResponseBody
     @Override
-    public HrmResult insertUserInfo(@RequestBody  UserInfo userInfo) {
-        try {
-            userInfoService.insert(userInfo);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+    public HrmResult insertUserInfo(@RequestBody  UserInfo userInfo){
+        userInfoService.insert(userInfo);
         return HrmResult.ok();
     }
-
-
-
-
 }

@@ -10,7 +10,6 @@ $(function () {
             url:'http://127.0.0.1:8090'+reqUrl.createUserUrl,
             data:JSON.stringify(formData),
             dataType:"json",
-            /*headers	:{'Content-Type': 'application/json'},*/
             contentType:"application/json",
             async:true,
             success:function (data) {
